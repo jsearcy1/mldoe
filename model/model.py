@@ -42,7 +42,7 @@ class Model():
                     rotation_range=15                           
                     )  # randomly flip images
 
-        self.train_generator=data_gen.flow_from_directory('/projects/bgmp/shared/2019_ML_workshop/datasets/pcamv1/images/train',
+        self.train_generator=data_gen.flow_from_directory('/projects/datascience/shared/2019_ML_workshop/datasets/pcamv1/images/train',
                                                     target_size=(96,96), 
                                                     color_mode='rgb', 
                                                     classes=['normal','tumor'],
@@ -61,7 +61,7 @@ class Model():
                     rotation_range=0                          
                     )  # randomly flip images
 
-        self.develop_generator=develop_gen.flow_from_directory('/projects/bgmp/shared/2019_ML_workshop/datasets/pcamv1/images/develop',
+        self.develop_generator=develop_gen.flow_from_directory('/projects/datascience/shared/2019_ML_workshop/datasets/pcamv1/images/develop',
                                                     target_size=(96,96), 
                                                     color_mode='rgb', 
                                                     classes=['normal','tumor'],
@@ -69,7 +69,7 @@ class Model():
                                                     batch_size=32,
                                                     shuffle=False)
 
-        self.test_generator=develop_gen.flow_from_directory('/projects/bgmp/shared/2019_ML_workshop/datasets/pcamv1/images/test',
+        self.test_generator=develop_gen.flow_from_directory('/projects/datascience/shared/2019_ML_workshop/datasets/pcamv1/images/test',
                                                     target_size=(96,96), 
                                                     color_mode='rgb', 
                                                     classes=['normal','tumor'],
